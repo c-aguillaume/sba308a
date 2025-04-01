@@ -8,22 +8,36 @@ async function initialLoad(params) {
                 throw new Error("Could not fetch resource");
             }
             const allChar = await response.json();
-                // console.log(allChar)  //Console Log all characters  
-            allChar.data.forEach((individualChar) => {
-                    let charName = individualChar.attributes.name
-                    if(individualChar.id == "c3e73383-319f-4ff4-bdbb-3e588962366e"){
-                        // console.log(charName)        // console log individual char name
-                    }
-                });
+                // console.log(allChar)  //Console Log all characters 
+                
+                let tenCharacters = 
+            allChar.data.forEach(element => {
+                let charaterData = new HarryPotterCharacters(element.name, element.bloods_status, element.wand, element.wiki_link)
+                return charaterData
+            });
+            
+                // allChar.data.forEach((individualChar) => {
+            //         let charName = individualChar.attributes.name
+            //         if(individualChar.id == "c3e73383-319f-4ff4-bdbb-3e588962366e"){
+            //             console.log(charName)        // console log individual char name
+            //         }
+            //     });
     } catch (error) {
         console.log(error)
     }
 }
+
 initialLoad()
 
-function getCharData(initialLoad){
+
+
+
+
+
+
+// function getCharData(initialLoad){
     // let indiv_char_name = 
-}
+// }
 
 //Add images and content to Card
 
@@ -38,5 +52,8 @@ class HarryPotterCharacters{
     }
 }
 
-const char_one = new HarryPotterCharacters
-console.log(char_one)
+// const char_one = new HarryPotterCharacters
+// console.log(char_one)
+
+
+// array of objects. for loop or for each or Map.
