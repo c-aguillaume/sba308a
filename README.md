@@ -10,3 +10,13 @@ The plan is to make cards for each character. I will start with 5 cards.
         <br>Image:
         <br>wand:
         <br>wiki link to wiki page for this character:
+
+
+        I originally started with the above but after realizing the data set was incomplete I changed to the following:
+
+        <br>Name:
+        <br>Gender
+        <br>Eye Color
+        <br>Image:
+        <br>wand:
+        <br>wiki link to wiki page for this character:

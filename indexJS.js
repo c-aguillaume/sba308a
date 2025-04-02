@@ -10,10 +10,10 @@ async function initialLoad(params) {
             const allChar = await response.json();
                 // console.log(allChar)  //Console Log all characters 
                 
-                let tenCharacters = 
+    
             allChar.data.forEach(element => {
-                let charaterData = new HarryPotterCharacters(element.name, element.bloods_status, element.wand, element.wiki_link)
-                return charaterData
+                let charaterData = new HarryPotterCharacters(element.attributes.name, element.attributes.gender, element.attributes.eye_color, element.attributes.image, element.attributes.wands, element.attributes.wiki)
+                console.log(charaterData)
             });
             
                 // allChar.data.forEach((individualChar) => {
@@ -44,15 +44,17 @@ initialLoad()
 
 
 class HarryPotterCharacters{
-    constructor(name,bloods_status,wand,wiki_link){
-        this.name = null,
-        this.bloods_status = null,
-        this.wand = null,
-        this.wiki_link = null
+    constructor(name, gender, eye_color, image, wand, wiki_link){
+        this.name = name,
+        this.gender = gender,
+        this.eye_color = eye_color
+        this.image = image
+        this.wand = wand,
+        this.wiki_link = wiki_link
     }
 }
 
-// const char_one = new HarryPotterCharacters
+// const char_one = new HarryPotterCharacters("Harry Potter", "Muggle Born", "Whatever wand", "www.wikilink.com")   //This is created a new character using the class object I created above.
 // console.log(char_one)
 
 
